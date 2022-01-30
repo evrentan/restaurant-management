@@ -1,6 +1,8 @@
 # Restaurant Management Service Discovery
 Restaurant Management Service Discovery is an application working as a service discovery within the Restaurant Management microservice architecture based modules.
 
+Spring Cloud Config Server runs on 6969 port.
+
 ## Table of Contents
 
 1. [How to Contribute](#how-to-contribute)

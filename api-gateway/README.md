@@ -1,7 +1,9 @@
-# Restaurant Management Spring Cloud Config Server
-Restaurant Management Spring Cloud Config Server to serve configurations to other applications within the Restaurant Management Microservice Architecture dynamically.
+# Restaurant Management API Gateway
+Restaurant Management API Gateway is an application working as a common API Gateway within the Restaurant Management microservice architecture based modules.
 
-Spring Cloud Config Server runs on 8888 port.
+API Gateway is added as a Eureka Client within this project in order to use discovery functions to identify the correct API from the service registry.
+
+Spring Cloud Config Server runs on 8081 port.
 
 ## Table of Contents
 
@@ -13,7 +15,8 @@ Spring Cloud Config Server runs on 8888 port.
 6. [Running the Application Locally](#running-the-application-locally)
 7. [Running the Application in Docker](#running-the-application-in-docker)
 8. [Run Actuator](#run-actuator)
-9. [Copyright](#copyright)
+9. [Extra Notes](#extra-notes)
+10. [Copyright](#copyright)
 
 ## How to Contribute
 
@@ -34,7 +37,8 @@ For building and running the application belows are required;
 - [Spring Boot 2.6.3](https://spring.io/blog/2022/01/20/spring-boot-2-6-3-is-now-available)
 - [JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 - [Maven 3.8.1](https://maven.apache.org)
-- Spring Cloud Config Server
+- Spring Cloud Gateway
+- Eureka Client
 - Spring Boot Actuator
 
 ## Coding Standards
@@ -49,14 +53,14 @@ Below coding standards should be followed within the project;
 Below version control standards should be followed within the project;
 
 - Feature enhancements or defect fixes should not be committed to main branches, they should be coded in feature or fix branches.
-- Issues should be created for each feature or fix in the [Restaurant Management Spring Cloud Config Server Github Repository](https://github.com/evrentan/restaurant-management)
+- Issues should be created for each feature or fix in the [Restaurant Management Service Discovery Github Repository](https://github.com/evrentan/restaurant-management)
 - Pull request (PR) should be created for each feature/fix branch to main branches.
 - While creating a PR "feature:", "fix:" or "doc:" prefix should be used to identify the PR type.
-- PRs should be linked with a valid issue in the [Restaurant Management Spring Cloud Config Server Github Repository](https://github.com/evrentan/restaurant-management).
+- PRs should be linked with a valid issue in the [Restaurant Management Service Discovery Github Repository](https://github.com/evrentan/restaurant-management).
 
 ## Running the Application Locally
 
-Application can be run with ServiceDiscoveryApplication class under evrentan.restaurantmanagement.springcloudconfigserver.spring.spring.
+Application can be run with ApiGatewayApplication class under evrentan.restaurantmanagement.apigateway.spring.spring.
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
@@ -70,15 +74,19 @@ Application can be run in Docker. [Dockerfile](Dockerfile) in the project root f
 
 ```shell
 mvn package
-docker build -t spring-cloud-config-server:1.0.0 .
-docker run -p 6969:6969 --name RestaurantManagementSpringCloudConfigServer spring-cloud-config-server:1.0.0
+docker build -t api-gateway:1.0.0 .
+docker run -p 8181:8181 --name RestaurantManagementApiGateway api-gateway:1.0.0
 ```
 
-##Run Actuator
+## Run Actuator
 
-[Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) can be reached from [local url for Actuator](http://localhost:8889/actuator). 
+[Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) can be reached from [local url for Actuator](http://localhost:8182/actuator). 
 
 Only health and caches endpoints are enabled by default. Configuration can be updated within the "actuator" section of the related application.properties file. 
+
+## Extra Notes
+
+* The module can be booted with Spring Cloud Config Server or directly within the application. In order to boot the project within itself, enable the properties in application.properties file and disable bootstrap.properties file.
 
 ## Copyright
 
