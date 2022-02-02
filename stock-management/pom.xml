@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>evrentan.restaurant-management</groupId>
-    <artifactId>spring-cloud-config-server</artifactId>
+    <artifactId>stock-management</artifactId>
     <version>1.0.0</version>
-    <name>spring-cloud-config-server</name>
-    <description>Cloud Config Server for Restaurant Management with using Spring Cloud Config Server</description>
+    <name>stock-management</name>
+    <description>Stock Management for Restaurant Management</description>
 
     <properties>
         <java.version>17</java.version>
@@ -27,19 +27,46 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- spring cloud config server dependency -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-
         <!-- spring boot actuator dependency -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- eureka client dependency -->
+        <!-- spring cloud config client dependency -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+
+        <!-- reactive mongodb dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+        </dependency>
+
+        <!-- reactive redis dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+        </dependency>
+
+        <!-- spring webflux dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- eureka server dependency -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

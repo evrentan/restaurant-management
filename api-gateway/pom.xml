@@ -8,15 +8,18 @@
 		<version>2.6.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>evrentan.restaurant-management</groupId>
 	<artifactId>api-gateway</artifactId>
 	<version>1.0.0</version>
 	<name>api-gateway</name>
-	<description>api-gateway</description>
+	<description>API Gateway for Restaurant Management with using Spring Cloud Gateway</description>
+
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2021.0.0</spring-cloud.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -51,8 +54,8 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-
 	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
