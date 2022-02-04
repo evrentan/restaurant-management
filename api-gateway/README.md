@@ -22,21 +22,21 @@ Spring Cloud Config Server runs on 8081 port.
 
 For the contributor covenant to this project, please check the Code of Conduct file.
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![Contributor Covenant][contributor]](CODE_OF_CONDUCT.md)
 
 ## Credits
 
 Below you can find the names of the contributors to this project;
 
-- [Evren Tan](https://github.com/evrentan)
+- [Evren Tan][evren-tan-github]
 
 ## Requirements
 
 For building and running the application belows are required;
 
-- [Spring Boot 2.6.3](https://spring.io/blog/2022/01/20/spring-boot-2-6-3-is-now-available)
-- [JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-- [Maven 3.8.1](https://maven.apache.org)
+- [Spring Boot 2.6.3][spring-boot-version]
+- [JDK 17][java-version]
+- [Maven 3.8.1][maven-version]
 - Spring Cloud Gateway
 - Eureka Client
 - Spring Boot Actuator
@@ -53,16 +53,16 @@ Below coding standards should be followed within the project;
 Below version control standards should be followed within the project;
 
 - Feature enhancements or defect fixes should not be committed to main branches, they should be coded in feature or fix branches.
-- Issues should be created for each feature or fix in the [Restaurant Management Service Discovery Github Repository](https://github.com/evrentan/restaurant-management)
+- Issues should be created for each feature or fix in the [Restaurant Management Github Repository Project][restaurant-management-github].
 - Pull request (PR) should be created for each feature/fix branch to main branches.
 - While creating a PR "feature:", "fix:" or "doc:" prefix should be used to identify the PR type.
-- PRs should be linked with a valid issue in the [Restaurant Management Service Discovery Github Repository](https://github.com/evrentan/restaurant-management).
+- PRs should be linked with a valid issue in the [Restaurant Management Github Repository Project][restaurant-management-github].
 
 ## Running the Application Locally
 
 Application can be run with ApiGatewayApplication class under evrentan.restaurantmanagement.apigateway.spring.spring.
 
-Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
+Alternatively you can use the [Spring Boot Maven plugin][spring-boot-maven-plugin] like so:
 
 ```shell
 mvn spring-boot:run
@@ -80,7 +80,7 @@ docker run -p 8181:8181 --name RestaurantManagementApiGateway api-gateway:1.0.0
 
 ## Run Actuator
 
-[Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/) can be reached from [local url for Actuator](http://localhost:8182/actuator). 
+[Spring Boot Actuator][spring-boot-actuator] can be reached from [local url for Actuator][local-actuator]. 
 
 Only health and caches endpoints are enabled by default. Configuration can be updated within the "actuator" section of the related application.properties file. 
 
@@ -92,3 +92,13 @@ Only health and caches endpoints are enabled by default. Configuration can be up
 
 GNU General Public License v3.0
 Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
+
+[evren-tan-github]: https://github.com/evrentan
+[spring-boot-version]: https://spring.io/blog/2022/01/20/spring-boot-2-6-3-is-now-available
+[java-version]: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+[maven-version]: https://maven.apache.org
+[contributor]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
+[restaurant-management-github]: https://github.com/evrentan/restaurant-management
+[spring-boot-maven-plugin]: https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html
+[spring-boot-actuator]: https://spring.io/guides/gs/actuator-service/
+[local-actuator]: http://localhost:8182/actuator
