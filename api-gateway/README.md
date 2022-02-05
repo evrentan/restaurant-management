@@ -60,7 +60,7 @@ Below version control standards should be followed within the project;
 
 ## Running the Application Locally
 
-Application can be run with ApiGatewayApplication class under evrentan.restaurantmanagement.apigateway.spring.spring.
+Application can be run with [ApiGatewayApplication][api-gateway-main-class] class.
 
 Alternatively you can use the [Spring Boot Maven plugin][spring-boot-maven-plugin] like so:
 
@@ -99,6 +99,7 @@ Permissions of this strong copyleft license are conditioned on making available 
 [maven-version]: https://maven.apache.org
 [contributor]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
 [restaurant-management-github]: https://github.com/evrentan/restaurant-management
+[api-gateway-main-class]: src/main/java/evrentan/restaurantmanagement/apigateway/ApiGatewayApplication.java
 [spring-boot-maven-plugin]: https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html
 [spring-boot-actuator]: https://spring.io/guides/gs/actuator-service/
 [local-actuator]: http://localhost:8182/actuator
