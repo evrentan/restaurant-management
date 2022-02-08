@@ -56,7 +56,7 @@ Below version control standards should be followed within the project;
 
 ## Running the Application Locally
 
-Application can be run with [ServiceDiscoveryApplication][spring-cloud-config-server-main-class] class.
+Application can be run with [SpringCloudConfigServerApplication][spring-cloud-config-server-main-class] class.
 
 Alternatively you can use the [Spring Boot Maven plugin](spring-boot-maven-plugin) like so:
 
